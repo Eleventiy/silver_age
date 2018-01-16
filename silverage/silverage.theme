@@ -11,5 +11,5 @@ function silverage_theme_suggestions_page_alter(array &$suggestions, array $vari
     $suggestions[] = 'page__service';
 
   }
-  print_r($node->getType());
+
 }
