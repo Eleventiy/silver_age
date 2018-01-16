@@ -1,0 +1,5 @@
+# IDE's files & folders
+.idea
+
+# Applications & Tools
+node_modules
