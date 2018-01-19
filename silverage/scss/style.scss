@@ -6,3 +6,327 @@
 
 // Base-theme overrides.
 @import 'overrides';
+
+
+// =====================================================================================================================
+// *** Custom styles ***
+// =====================================================================================================================
+@import "vars";
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,700&subset=cyrillic');
+
+
+// *** Styles debuger ***
+// =====================================================================================================================
+//*,
+//*::before,
+//*::after {
+//	border: 1px solid red;
+//}
+
+
+// *** Common styles ***
+// =====================================================================================================================
+body {
+	color: $textColor;
+	font-family: $PlayfairDisplay-Regular;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+
+// *** MAIN HEADER ***
+// =====================================================================================================================
+.navbar {
+	height: 148px;
+	margin-bottom: 0;
+	padding: 17px 0;
+	border: 0;
+	@include box-shadow(1px, 1px, 6px, rgba($blackColor, 0.33));
+	&-default {
+		background-color: $whiteColor;
+		border-color: transparent;
+	}
+	&-static-top {
+		border-width: 0;
+	}
+	&-header {
+		display: flex;
+		@include min-screen($tablet) {
+			float: none;
+		}
+	}
+	.logo {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.region-topleft,
+.region-topright {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.region-topmidle {
+	.logo {
+		img {
+			width: 117px;
+			height: 115px;
+		}
+	}
+}
+.region-topright {
+	align-items: flex-end;
+}
+
+#block-telephonetop,
+#block-schedule {
+	> .field {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.topleft__img {
+	width: 29px;
+	height: 29px;
+	margin-right: 10px;
+}
+.topleft__phone {
+	span,
+	a {
+		display: block;
+	}
+	a {
+		color: $textColor;
+		font-size: 12px;
+		line-height: 1;
+		letter-spacing: 0.025em;
+		text-decoration: underline;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+.topright__img {
+	width: 25px;
+	height: 25px;
+	margin-right: 15px;
+}
+.topright__shedule {
+	span {
+
+	}
+}
+
+#block-topmenuleft,
+#block-topmenuright {
+	.nav {
+		display: flex;
+		margin-bottom: 25px;
+		> li {
+			margin-right: 40px;
+			&:last-child {
+				margin-right: 0;
+			}
+			> a {
+				padding: 0;
+				color: $textColor;
+				font-size: 15px;
+				line-height: 24px;
+				letter-spacing: 0.025em;
+				transition: all 0.25s;
+				&:hover,
+				&:focus {
+					color: $highlightColor;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+#block-topmenuright {
+	.nav {
+		justify-content: flex-end;
+	}
+}
+
+
+// *** INNER PAGES ***
+// =====================================================================================================================
+
+// Common styles
+.inner-page-banner {
+	position: relative;
+	color: $whiteColor;
+	//background-image : attr(data-image-src url);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba($blackColor, .67);
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+		padding: 50px 0 100px 165px;
+		h1 {
+			width: 100%;
+			max-width: 60%;
+			margin: 0 0 10px;
+			font-family: $PlayfairDisplay-Bold;
+			font-size: 30px;
+			line-height: 38px;
+			letter-spacing: 0.05em;
+		}
+	}
+
+	.field--name-field-small-body {
+		width: 100%;
+		max-width: 65%;
+		margin-bottom: 40px;
+		font-family: $Montserrat-Regular;
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	.field--name-field-icon {
+		display: flex;
+		> .field--item {
+			margin-right: 60px;
+			.field-collection-item--name-field-icon {
+				.content {
+					display: flex;
+					align-items: center;
+					.field--name-field-image {
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Page "Services inner"
+.service-descr {
+	position: relative;
+	padding: 90px 0;
+	&::after {
+		content: '';
+		position: absolute;
+		top: -22%;
+		right: -44%;
+		z-index: -1;
+		display: block;
+		width: 853px;
+		height: 853px;
+		background-color: rgba($grayColor, .5);
+		transform: rotate(45deg);
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left {
+		width: 100%;
+		max-width: 750px;
+	}
+	&__right {
+		width: 100%;
+		max-width: 360px;
+	}
+	.field--name-field-body-title {
+		width: 100%;
+		max-width: 39%;
+		margin-bottom: 17px;
+		font-family: $PlayfairDisplay-Bold;
+		font-size: 30px;
+		line-height: 36px;
+		letter-spacing: 0.025em;
+	}
+	.field--name-body {
+		font-family: $Montserrat-Regular;
+		font-size: 14px;
+		line-height: 26px;
+		p {
+			margin: 0 0 26px;
+		}
+	}
+	.field--name-field-quote {
+		position: relative;
+		padding-left: 37px;
+		font-size: 20px;
+		line-height: 36px;
+		letter-spacing: 0.025em;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 27px;
+			height: 21px;
+			background: transparent url("../images/icons/open-quote.png") no-repeat;
+		}
+		blockquote {
+			padding: 0;
+			margin: 0;
+			border: 0;
+			font-size: inherit;
+			q {
+				&::before,
+				&::after {
+					@include vis-hid;
+				}
+			}
+		}
+	}
+}
+
+
+// *** MAIN FOOTER ***
+// =====================================================================================================================
+.footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+	background-color: $footerBg;
+	#block-copyright {
+		> .field {
+			span {
+				display: inline-block;
+				color: $lightGrayColor;
+				font-size: 12px;
+				letter-spacing: 0.025em;
+				&:first-child {
+					position: relative;
+					margin-right: 11px;
+					padding-right: 14px;
+					&::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						right: 0;
+						display: block;
+						width: 3px;
+						height: 3px;
+						margin-top: -1.5px;
+						border-radius: 100%;
+						background-color: $lightGrayColor;
+					}
+				}
+			}
+			a {
+				color: $lightGrayColor;
+			}
+		}
+	}
+}

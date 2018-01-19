@@ -60,7 +60,7 @@
  *
  * @see template_preprocess_node()
  *
- * @todo Remove the id attribute (or make it a class), because if that gets
+ * @ todo Remove the id attribute (or make it a class), because if that gets
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
  */
@@ -76,28 +76,60 @@
   ]
 %}
 
-<article{{ attributes.addClass(classes) }}>
+{# Inner pages banner #}
+<div class="inner-page-banner" style="background: url({{ file_url(node.field_banner_top.entity.fileuri)}}) no-repeat;
+		-webkit-background-size: cover; background-size: cover;">
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+	{#data-image-src="{{ file_url(node.field_banner_top.entity.fileuri)}}"#}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('author') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+	{#{% if (node.field_banner_top.entity.fileuri) %}#}
+    {#{{ file_url(node.field_banner_top.entity.fileuri) }}#}
+    {#{% else %}#}
+    {#kjhgkjghkjghkjh#}
+    {#{% endif %}#}
 
-  <div{{ content_attributes.addClass('content') }}>
-    {{ content }}
-  </div>
+	<div class="container">
+		<div class="inner-page-banner__content">
+			{{ label }}
+			{{ content.field_small_body }}
+			{{ content.field_icon }}
+		</div>
+	</div>
+</div>
 
-</article>
+{# Service page description #}
+<div class="service-descr">
+	<div class="container">
+
+		<div class="service-descr__wrapper">
+			<div class="service-descr__left">
+				{{ content.field_body_title }}
+				{{ content.body }}
+			</div>
+
+			<div class="service-descr__right">
+				{{ content.field_quote }}
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+{#{{ kint(content|keys) }}#}
+
+{#<article{{ attributes.addClass(classes) }}>#}
+
+  {#{{ title_prefix }}#}
+  {#{% if not page %}#}
+    {#<h2{{ title_attributes }}>#}
+      {#<a href="{{ url }}" rel="bookmark">{{ label }}</a>#}
+    {#</h2>#}
+  {#{% endif %}#}
+  {#{{ title_suffix }}#}
+
+  {#<div{{ content_attributes.addClass('content') }}>#}
+    {#{{ content }}#}
+  {#</div>#}
+
+{#</article>#}

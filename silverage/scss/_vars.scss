@@ -1,0 +1,39 @@
+@import "mixins";
+
+// *** Colors ***
+// ==============
+$blackColor: #000;
+$whiteColor: #fff;
+$textColor: #2c2c2c;
+$highlightColor: #cb9e6d;
+$footerBg: #262526;
+$grayColor: #eee;
+$lightGrayColor: #c0c0c0;
+
+
+// *** Fonts ***
+// =============
+
+// Montserrat
+@include font-face("Montserrat-Bold", "../fonts/Montserrat/montserrat-bold-webfont");
+@include font-face("Montserrat-Light", "../fonts/Montserrat/montserrat-light-webfont");
+@include font-face("Montserrat-Medium", "../fonts/Montserrat/montserrat-medium-webfont");
+@include font-face("Montserrat-Regular", "../fonts/Montserrat/montserrat-regular-webfont");
+
+// Playfair_Display
+@include font-face("PlayfairDisplay-Bold", "../fonts/Playfair_Display/playfairdisplay-bold-webfont");
+@include font-face("PlayfairDisplay-Regular", "../fonts/Playfair_Display/playfairdisplay-regular-webfont");
+
+
+$Montserrat-Bold: "Montserrat-Bold", Arial, Tahoma, sans-serif;
+$Montserrat-Light: "Montserrat-Light", Arial, Tahoma, sans-serif;
+$Montserrat-Medium: "Montserrat-Medium", Arial, Tahoma, sans-serif;
+$Montserrat-Regular: "Montserrat-Regular", Arial, Tahoma, sans-serif;
+$PlayfairDisplay-Bold: "PlayfairDisplay-Bold", Arial, Tahoma, serif;
+$PlayfairDisplay-Regular: "PlayfairDisplay-Regular", Arial, Tahoma, serif;
+
+
+// *** Breakpoints ***
+// ===================
+$mobile: 320px;
+$tablet: 768px;
