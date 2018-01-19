@@ -11,13 +11,6 @@ function silverage_theme_suggestions_page_alter(array &$suggestions, array $vari
     $suggestions[] = 'page__service';
 
   }
-  /**
-   * Implements hook_theme_suggestions_node_alter().
-   */
-  function silverage_theme_suggestions_node_alter(array &$suggestions, array $variables) {
-    kint($variables['elements']['#node']);
-  }
-}
 
 
 function silverage_preprocess_views_view_field__gallery_service__field_images(&$vars) {
