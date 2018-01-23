@@ -31,10 +31,16 @@
  * @ingroup themeable
  */
 #}
-{% for field in fields -%}
+{% for key, field in fields -%}
 
    {%  if field.class == 'field-gallery-text' or field.class == 'field-gallery'%}
        <div class="row">
+    {% endif %}
+
+
+    {% if key == "field_image_u_big"%}
+        <div class="gallery">
+
     {% endif %}
     {%- if field.wrapper_element -%}
         <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
@@ -54,6 +60,10 @@
     {%- if field.wrapper_element -%}
         </{{ field.wrapper_element }}>
     {%- endif %}
+    {% if key == "field_image_u_small4"%}
+       </div>
+
+    {% endif %}
     {%  if field.class == 'field-gallery-text' or field.class == 'field-gallery' %}
         </div>
     {% endif %}
