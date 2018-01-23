@@ -25,3 +25,4 @@ regions:
 libraries:
   - 'silverage/global-styling'
   - 'silverage/bootstrap-scripts'
+  - 'silverage/masonry'

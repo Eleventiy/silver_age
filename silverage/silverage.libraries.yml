@@ -2,6 +2,12 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+  js:
+      js/common.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
 
 bootstrap-scripts:
   js:
@@ -17,8 +23,7 @@ bootstrap-scripts:
     bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
     bootstrap/assets/javascripts/bootstrap/tab.js: {}
     bootstrap/assets/javascripts/bootstrap/transition.js: {}
-    vendors/masonry/masonry.pkgd.min.js: {}
 
-#masonry:
-#  js:
-#    vendors/masonry/masonry.pkgd.min.js: {}
+masonry:
+  js:
+    vendors/masonry/masonry.pkgd.min.js: {}

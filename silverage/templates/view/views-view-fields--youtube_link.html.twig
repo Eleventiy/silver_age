@@ -31,15 +31,35 @@
  * @ingroup themeable
  */
 #}
-{% for field in fields -%}
 
-   {%  if field.class == 'field-video-youtube-'%}
-       <div style="display: none">
-     <div id="you" >wwwwwwwwwwwwwwwww<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ row._entity.field_video_youtube_.0.value }}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-       </div>
-    {% elseif field.class == 'field-preview-youtube' %}
-        {{ file_url(row._entity.field_preview_youtube.0.entity.uri.value) }}
-    {% endif %}
+{#{% for field in fields -%}#}
+	{#{% set link = row._entity.field_video_youtube_.0.value %}#}
+	{#{% set bg = file_url(row._entity.field_preview_youtube.0.entity.uri.value) %}#}
+{#{%- endfor %}#}
+{#{{ row._entity.field_video_youtube_.0.value }}#}
 
-{%- endfor %}
-<a data-colorbox-inline="#you">перезвонить мне</a>
+<div class="youtube-wrapper" style="background: url({{ file_url(row._entity.field_preview_youtube.0.entity.uri.value)
+}}); background-size: cover;">
+	<div style="display: none">
+		<div id="you" >
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ link }}?rel=0&controls=0&showinfo=0"
+			        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<a data-colorbox-inline="#you" class="youtube-link">смотреть видео</a>
+</div>
+
+{#{% for field in fields -%}#}
+
+	{#{%  if field.class == 'field-video-youtube-'%}#}
+		{#<div style="display: none">#}
+			{#<div id="you">#}
+				{#<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ row._entity.field_video_youtube_.0.value }}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>#}
+			{#</div>#}
+		{#</div>#}
+	{#{% elseif field.class == 'field-preview-youtube' %}#}
+		{#{{ file_url(row._entity.field_preview_youtube.0.entity.uri.value) }}#}
+	{#{% endif %}#}
+
+{#{%- endfor %}#}
