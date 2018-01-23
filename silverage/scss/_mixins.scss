@@ -15,6 +15,30 @@
 	white-space: nowrap;
 }
 
+// Buttons
+@mixin button($color, $background-color, $border-color, $hover_color, $hover_background-color, $hover_border-color) {
+	display: inline-block;
+	padding: 13px 20px;
+	color: $color;
+	font-family: $Montserrat-Bold;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: $background-color;
+	border: 1px solid $border-color;
+	border-radius: 3px;
+	transition: all 0.25s;
+	&:hover,
+	&:active,
+	&.active {
+		color: $hover_color;
+		background: $hover_background-color;
+		border-color: $hover_border-color;
+	}
+}
+
 // =====================================================================================================================
 // *** FONT FACE ***
 // =====================================================================================================================

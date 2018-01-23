@@ -29,6 +29,7 @@
 // *** Common styles ***
 // =====================================================================================================================
 body {
+	overflow-x: hidden;
 	color: $textColor;
 	font-family: $PlayfairDisplay-Regular;
 	font-size: 16px;
@@ -157,7 +158,28 @@ body {
 // *** INNER PAGES ***
 // =====================================================================================================================
 
-// Common styles
+// Titles
+.block-title {
+	position: relative;
+	margin: 0 0 13px;
+	padding-bottom: 45px;
+	font-family: $PlayfairDisplay-Bold;
+	font-size: 30px;
+	line-height: 28px;
+	letter-spacing: 0.025em;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: block;
+		width: 236px;
+		height: 30px;
+		transform: translateX(-50%);
+	}
+}
+
+// Banner
 .inner-page-banner {
 	position: relative;
 	color: $whiteColor;
@@ -209,6 +231,88 @@ body {
 					}
 				}
 			}
+		}
+	}
+}
+
+// Advantages block
+#block-osobennostinasegopansionata {
+	padding: 90px 0;
+	background: $highlightColor url("../images/backgrounds/features_pattern.jpg") repeat;
+	color: $whiteColor;
+	text-align: center;
+	.block-title {
+		&::after {
+			background: transparent url("../images/icons/title-separator.png") no-repeat;
+		}
+	}
+	.field--name-body {
+		margin-bottom: 52px;
+	}
+	.field--name-field-image.field--type-field-collection {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> .field--item {
+			flex: 1 330px;
+			max-width: 330px;
+			margin-bottom: 41px;
+		}
+	}
+	.field--name-field-image.field--type-image {
+		margin-bottom: 21px;
+	}
+	.field--name-field-title-image {
+		font-family: $PlayfairDisplay-Bold;
+		font-size: 22px;
+		line-height: 30px;
+	}
+}
+
+// Gallery block
+#block-views-block-gallery-service-block-1 {
+	padding: 95px 0 50px;
+	text-align: center;
+	.block-title {
+		&::after {
+			background: transparent url("../images/icons/title-separator_highlight.png") no-repeat;
+		}
+	}
+	.views-field-field-gallery-text {
+		max-width: 30%;
+		margin: 0 auto 50px;
+		.field-content {
+			color: $hardGrayColor;
+		}
+	}
+	.views-field-field-gallery {
+		a {
+			@include button($whiteColor, $highlightColor, $highlightColor, $textColor, transparent, $textColor);
+		}
+	}
+}
+
+// Callback block
+#block-vebforma-2 {
+	position: relative;
+	padding: 93px 0 100px;
+	background: #3c4a5a url("../images/backgrounds/callback_bg.jpg") no-repeat;
+	background-size: cover;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.block-title {
+		color: $whiteColor;
+		text-align: center;
+		&::after {
+			background: transparent url(../images/icons/title-separator.png) no-repeat;
 		}
 	}
 }

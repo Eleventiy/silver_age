@@ -12,15 +12,17 @@ function silverage_theme_suggestions_page_alter(array &$suggestions, array $vari
 
   }
 
-
+}
 function silverage_preprocess_views_view_field__gallery_service__field_images(&$vars) {
-  $view = $vars['view'];
-  $row = $vars['row'];
-  $file_uri = $row->_entity->field_images->entity->getFileUri();
-  $img_title = $row->_entity->field_images->first()->getValue()['title'];
- // $image_style_large_uri = ImageStyle::load('large')->buildUrl($file_uri);
-
-  print_r($row->_entity->field_images->entity->getFileUri());
-  if($file_uri)
-    $vars['img_url'] = array( 'url' => $file_uri, 'title' => $img_title);
+//  $view = $vars['view'];
+//  $row = $vars['row'];
+//  $file_uri = $row->_entity->field_images->entity->getFileUri();
+//  $img_title = $row->_entity->field_images->first()->getValue()['title'];
+// // $image_style_large_uri = ImageStyle::load('large')->buildUrl($file_uri);
+//
+// // print_r($row->_entity->field_images->entity->getFileUri());
+//  if($file_uri){
+//    $vars['img_url'] = array( 'url' => $file_uri, 'title' => $img_title);
+//  }
+//}
 }

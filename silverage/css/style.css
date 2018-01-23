@@ -6371,6 +6371,7 @@ p:last-child,
   font-family: "PlayfairDisplay-Regular";
   src: url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.eot?") format("eot"), url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.woff2") format("woff2"), url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.woff") format("woff"), url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.ttf") format("truetype"), url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.svg#PlayfairDisplay-Regular") format("svg"); }
 body {
+  overflow-x: hidden;
   color: #2c2c2c;
   font-family: "PlayfairDisplay-Regular", Arial, Tahoma, serif;
   font-size: 16px;
@@ -6466,6 +6467,24 @@ body {
 #block-topmenuright .nav {
   justify-content: flex-end; }
 
+.block-title {
+  position: relative;
+  margin: 0 0 13px;
+  padding-bottom: 45px;
+  font-family: "PlayfairDisplay-Bold", Arial, Tahoma, serif;
+  font-size: 30px;
+  line-height: 28px;
+  letter-spacing: 0.025em; }
+  .block-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 236px;
+    height: 30px;
+    transform: translateX(-50%); }
+
 .inner-page-banner {
   position: relative;
   color: #fff; }
@@ -6505,6 +6524,79 @@ body {
         align-items: center; }
         .inner-page-banner .field--name-field-icon > .field--item .field-collection-item--name-field-icon .content .field--name-field-image {
           margin-right: 20px; }
+
+#block-osobennostinasegopansionata {
+  padding: 90px 0;
+  background: #cb9e6d url("../images/backgrounds/features_pattern.jpg") repeat;
+  color: #fff;
+  text-align: center; }
+  #block-osobennostinasegopansionata .block-title::after {
+    background: transparent url("../images/icons/title-separator.png") no-repeat; }
+  #block-osobennostinasegopansionata .field--name-body {
+    margin-bottom: 52px; }
+  #block-osobennostinasegopansionata .field--name-field-image.field--type-field-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #block-osobennostinasegopansionata .field--name-field-image.field--type-field-collection > .field--item {
+      flex: 1 330px;
+      max-width: 330px;
+      margin-bottom: 41px; }
+  #block-osobennostinasegopansionata .field--name-field-image.field--type-image {
+    margin-bottom: 21px; }
+  #block-osobennostinasegopansionata .field--name-field-title-image {
+    font-family: "PlayfairDisplay-Bold", Arial, Tahoma, serif;
+    font-size: 22px;
+    line-height: 30px; }
+
+#block-views-block-gallery-service-block-1 {
+  padding: 95px 0 50px;
+  text-align: center; }
+  #block-views-block-gallery-service-block-1 .block-title::after {
+    background: transparent url("../images/icons/title-separator_highlight.png") no-repeat; }
+  #block-views-block-gallery-service-block-1 .views-field-field-gallery-text {
+    max-width: 30%;
+    margin: 0 auto 50px; }
+    #block-views-block-gallery-service-block-1 .views-field-field-gallery-text .field-content {
+      color: #6f6f6f; }
+  #block-views-block-gallery-service-block-1 .views-field-field-gallery a {
+    display: inline-block;
+    padding: 13px 20px;
+    color: #fff;
+    font-family: "Montserrat-Bold", Arial, Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #cb9e6d;
+    border: 1px solid #cb9e6d;
+    border-radius: 3px;
+    transition: all 0.25s; }
+    #block-views-block-gallery-service-block-1 .views-field-field-gallery a:hover, #block-views-block-gallery-service-block-1 .views-field-field-gallery a:active, #block-views-block-gallery-service-block-1 .views-field-field-gallery a.active {
+      color: #2c2c2c;
+      background: transparent;
+      border-color: #2c2c2c; }
+
+#block-vebforma-2 {
+  position: relative;
+  padding: 93px 0 100px;
+  background: #3c4a5a url("../images/backgrounds/callback_bg.jpg") no-repeat;
+  background-size: cover; }
+  #block-vebforma-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6); }
+  #block-vebforma-2 .block-title {
+    color: #fff;
+    text-align: center; }
+    #block-vebforma-2 .block-title::after {
+      background: transparent url(../images/icons/title-separator.png) no-repeat; }
 
 .service-descr {
   position: relative;
